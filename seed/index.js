@@ -93,7 +93,7 @@ Observable.combineLatest(
             if (challenge.files) {
               challenge.files = _.reduce(challenge.files, (map, file) => {
                 map[file.key] = {
-                  ...file,
+                  file,
                   head: arrToString(file.head),
                   contents: arrToString(file.contents),
                   tail: arrToString(file.tail)
